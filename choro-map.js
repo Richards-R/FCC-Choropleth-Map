@@ -20,8 +20,8 @@ createPolys();
 }
 
 createPolys = ()=>{
-  console.log(countyData.objects.counties.geometries)
-  console.log(eduData)
+  console.log("countydata geometries ", countyData.objects.counties.geometries)
+  console.log("edudata ",  eduData)
 }
 
 d3.select("svg")
