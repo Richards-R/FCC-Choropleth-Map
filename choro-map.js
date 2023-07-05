@@ -6,19 +6,28 @@ let eduData
 
 let eduDataURL = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json"
 let countyDataURL = "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json"
+foo();
 
 async function foo() {
 const eduResponse = await fetch(eduDataURL)
   eduData = await eduResponse.json();
-  console.log(eduData)
+  //console.log(eduData)
 const countyResponse = await fetch(countyDataURL)
   countyData = await countyResponse.json();
-  console.log(countyData)
+  //console.log(countyData)
+
+createPolys();
 }
-foo();
+
+createPolys = ()=>{
+  console.log(countyData.objects.counties.geometries)
+  console.log(eduData)
+}
 
 d3.select("svg")
 .attr("width", w)
 .attr("height", h)
 .style('background', 'rgb(100, 150, 210)')
 .attr("margin", 0)
+
+
