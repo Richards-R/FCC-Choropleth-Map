@@ -17,6 +17,7 @@ const countyResponse = await fetch(countyDataURL)
   //console.log(countyData)
 
 createPolys();
+createArcs();
 }
 
 createPolys = ()=>{
@@ -24,10 +25,20 @@ createPolys = ()=>{
   console.log("edudata ",  eduData)
 }
 
+createArcs = () =>{
+
+d3.selectAll("arcs")
+ .data(countyData.objects.counties.geometries)
+ .join("arc")
+ .attr("stroke", "black")
+ .attr("points", ((d)=> (d.arcs)))
+
+}
+
 d3.select("svg")
 .attr("width", w)
 .attr("height", h)
-.style('background', 'rgb(100, 150, 210)')
+.style('background', '#DCF3FF')
 .attr("margin", 0)
 
 
