@@ -15,11 +15,10 @@ h3 {
 }
 
 h4 {
-  
   margin-bottom:9px;
 }
 
-.county:hover{
+.county:hover {
  fill :#FF5733
 }
 
@@ -38,9 +37,8 @@ h4 {
   border: 3px;
   border-color: grey;
   font-family: sans-serif;
-
 }
 
-text{
+text {
   font-size: 10px
 }
